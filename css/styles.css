@@ -28,23 +28,16 @@ h4,
 h5,
 h6,
 p,
-ul,
-li {
+ul {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
 }
 
 /* common styles */
 
 body {
-  overflow-x: hidden;
   font-family: Roboto, sans-serif;
   font-size: 14px;
   color: var(--primary-text-color);
@@ -58,6 +51,19 @@ button {
   font-family: inherit;
   border: none;
   text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -81,13 +87,9 @@ button {
   padding-top: 94px;
 }
 
-.hidden {
-  margin-top: -60px;
-  opacity: 0;
-}
-
 .flex-container {
   display: flex;
+  align-items: center;
 }
 
 .list {
@@ -106,6 +108,12 @@ button {
   text-align: center;
 }
 
+.contact-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 /* header */
 
 .header-section {
@@ -116,6 +124,12 @@ button {
 
 .site-nav > li .current-page {
   color: var(--accent-color);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .logo {
@@ -137,8 +151,6 @@ button {
 
 .header-section .link {
   display: block;
-  padding-bottom: 7px;
-  padding-top: 7px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -155,11 +167,6 @@ button {
   color: var(--title-color);
 }
 
-.site-nav .link:not(last-child),
-.contact-list .link:not(last-child) {
-  margin-right: 50px;
-}
-
 .contact-list {
   margin-left: auto;
 }
@@ -171,12 +178,7 @@ button {
 /* hero-section */
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin-left: -50%;
-  margin-right: -50%;
+  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -210,6 +212,8 @@ button {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* advantages-section */
@@ -250,17 +254,11 @@ button {
 /* team-section */
 
 .team-section {
-  margin-left: -50%;
-  margin-right: -50%;
-
   background-color: var(--section-color2);
 }
 
 .team-section .list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   gap: 30px;
 }
 
@@ -300,12 +298,13 @@ button {
 .bottom-logo {
   display: block;
   margin-bottom: 20px;
+  margin-right: 0;
 
   color: var(--hero-title-color);
   line-height: 1.19;
 }
 
-.contacts-list li:not(last-child) {
+.contacts-list li:not(:last-child) {
   margin-bottom: 9px;
 }
 
