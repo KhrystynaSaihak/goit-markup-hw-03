@@ -1,0 +1,270 @@
+:root {
+  /* текст, фон, виділення */
+  --hero-title-color: #ffffff;
+  --primary-bg-color: #ffffff;
+  --button-bg-color: #f5f4fa;
+  --section-color2: #f5f4fa;
+  --prymary-border-color: #ececec;
+  --primary-text-color: #757575;
+  --section-color: #2f303a;
+  --button-color: #212121;
+  --title-color: #212121;
+  --logo-color: #000000;
+  --accent-color: #2196f3;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* common styles */
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: var(--primary-text-color);
+  line-height: 1.71;
+  background-color: var(--primary-bg-color);
+}
+
+button {
+  display: inline-block;
+
+  font-family: inherit;
+  border: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.list {
+  list-style: none;
+}
+
+.title {
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  line-height: 1.67;
+  text-align: center;
+}
+
+/* header */
+
+.header-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--prymary-border-color);
+}
+
+.site-nav > li .current-page {
+  color: var(--accent-color);
+}
+
+.logo {
+  display: flex;
+  margin-right: 93px;
+
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--logo-color);
+  line-height: 1.38;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.header-section .link {
+  display: block;
+  padding-bottom: 7px;
+  padding-top: 7px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.header-section .link:hover,
+.header-section .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link {
+  color: var(--title-color);
+}
+
+.site-nav .link:not(last-child),
+.contact-list .link:not(last-child) {
+  margin-right: 50px;
+}
+
+.contact-list {
+  margin-left: auto;
+}
+
+.contact-list .link {
+  color: var(--primary-text-color);
+}
+
+/* hero-section */
+
+.hero-title {
+  color: var(--hero-title-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-section,
+.footer-section {
+  background-color: var(--section-color);
+}
+
+.hero-button {
+  background-color: var(--accent-color);
+  color: var(--hero-title-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+/* advantages-section */
+
+.advantages-item {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantages-list p {
+  letter-spacing: 0.03em;
+}
+
+/* team-section */
+
+.team-section {
+  background-color: var(--section-color2);
+}
+
+.team-item > h3,
+.team-item > p {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-item > h3 {
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+/* footer */
+
+.bottom-logo {
+  color: var(--hero-title-color);
+  line-height: 1.19;
+}
+
+.contacts-list a {
+  font-style: normal;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+  text-decoration: none;
+}
+
+.location {
+  color: var(--hero-title-color);
+}
+
+.mail,
+.tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* portfolio-page */
+/* portfolio-section */
+
+.buttons-switches .buttons-switches-item {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--button-color);
+  background-color: var(--button-bg-color);
+  cursor: pointer;
+}
+
+.buttons-switches .buttons-switches-item:hover,
+.buttons-switches .buttons-switches-item:focus {
+  color: var(--hero-title-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio-item > a {
+  text-decoration: none;
+}
+
+.portfolio-item .portfolio-item-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
+.portfolio-item .portfolio-item-description {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.88;
+  color: var(--primary-text-color);
+}
