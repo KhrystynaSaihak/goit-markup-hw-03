@@ -223,6 +223,10 @@ button {
   gap: 30px;
 }
 
+.advantages-item {
+  width: calc((100%-90px) / 4);
+}
+
 .advantages-item .title {
   margin-bottom: 10px;
   font-size: 14px;
